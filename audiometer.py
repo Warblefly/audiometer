@@ -48,7 +48,13 @@ LAVFI = "[aid1]asplit=7[a][b][c][d][e][f][g];" + \
         "[h]anullsink;" + \
         "[v][w][r][p][s]vstack=inputs=5,fps=50[vo]"
 
-dos_command = MPV + 'mpv.exe' + ' --lavfi-complex "' + LAVFI + '" ' + filename_raw
-subprocess.check_output(dos_command)
+dos_command = MPV + 'mpv.exe' + ' -v ' + ' --lavfi-complex "' + LAVFI + '" ' + filename_raw
+
+try:
+    subprocess.check_output(dos_command, stderr=subprocess.STDOUT)
+except subprocess.CalledProcessError as e:
+    print(e)
+
+    
 
 
