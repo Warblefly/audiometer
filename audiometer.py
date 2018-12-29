@@ -35,7 +35,7 @@ LAVFI = "[aid1]asplit=7[a][b][c][d][e][f][g];" + \
         "drawgrid=x=0:y=479:w=100:h=60:color=gray[u];" + \
         "[d]showspectrum=size=480x480:overlap=1:slide=scroll:scale=5thrt:mode=combined[t];" + \
         "[t][u]hstack[v];" + \
-        "[e]showvolume=w=960:h=50:t=0:f=0.9," + \
+        "[e]showvolume=w=960:h=50:t=0:f=0.9:dm=1," + \
         "drawtext=font=Arial:fontsize=24:text='1':x=47:y=40:fontcolor=white," + \
         "drawtext=font=Arial:fontsize=24:text='2':x=77:y=40:fontcolor=white," + \
         "drawtext=font=Arial:fontsize=24:text='3':x=128:y=40:fontcolor=white," + \
