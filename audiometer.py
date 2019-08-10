@@ -32,7 +32,7 @@ LAVFI = "[aid1]asplit=8[a][b][c][d][e][f][g][i];" + \
         "[a]avectorscope=size=360x360:zoom=0.1:swap=1:draw=line:rate=" + str(rate) + ",drawgrid=180:180:color=gray[z];" + \
         "[b]ebur128=video=1:meter=18[q][ao];" + \
         "[q]scale=360:360[y];[z][y]hstack[w];" + \
-        "[c]showfreqs=fscale=lin:win_size=w4096:cmode=separate:size=360x360," + \
+        "[c]showfreqs=fscale=lin:win_size=4096:cmode=separate:size=360x360," + \
         "drawgrid=x=0:y=0:w=90:h=180:color=gray,fps=fps=" + str(rate) + "[u];" + \
         "[d]showspectrum=overlap=1:slide=scroll:scale=5thrt:mode=combined:legend=1:fps=" + str(rate) + "," + \
         "scale=360:360:lanczos[t];" + \
