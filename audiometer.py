@@ -38,7 +38,7 @@ LAVFI = "[aid1]volume=" + str(-level) + "dB," + \
         "[b]ebur128=video=1:meter=18[q][h];" + \
         "[q]fps=fps=" + str(rate) + ",scale=360:360[y];[z][y]hstack[w];" + \
         "[c]aresample=50000,showfreqs=fscale=lin:win_size=4096:cmode=separate:size=360x360,fps=fps=" + str(rate) + "," + \
-        "drawgrid=x=0:y=0:w=90:h=180:color=gray[u];" + \
+        "drawgrid=x=0:y=0:w=72:h=180:color=gray[u];" + \
         "[d]showspectrum=overlap=1:slide=scroll:scale=5thrt:mode=combined:legend=1:fps=" + str(rate) + "," + \
         "scale=360:360[t];" + \
         "[t][u]hstack[v];" + \
