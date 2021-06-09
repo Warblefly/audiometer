@@ -43,9 +43,9 @@ LAVFI = "[aid1]volume=" + str(-level) + "dB," + \
         "[a]avectorscope=size=360x360:zoom=0.1:swap=1:draw=line:rate=" + str(rate) + ",drawgrid=180:180:color=gray[z];" + \
         "[b]ebur128=video=1:meter=18[q][h];" + \
         "[q]fps=fps=" + str(rate) + ",scale=360:360[y];[z][y]hstack[w];" + \
-        "[c]aresample=50000,showfreqs=fscale=lin:win_size=1024:cmode=separate:size=360x360,fps=fps=" + str(rate) + "," + \
+        "[c]aresample=50000:resampler=soxr,showfreqs=fscale=lin:cmode=separate:size=360x360,fps=fps=" + str(rate) + "," + \
         "drawgrid=x=0:y=0:w=72:h=180:color=gray[u];" + \
-        "[d]showspectrum=overlap=0:win_func=bartlett:slide=scroll:scale=5thrt:mode=combined:legend=1:fps=" + str(rate) + "," + \
+        "[d]showspectrum=overlap=0:slide=scroll:scale=5thrt:mode=combined:legend=1:fps=" + str(rate) + "," + \
         "scale=360:360[t];" + \
         "[t][u]hstack[v];" + \
         "[e]aresample=192000,volume=+5.2dB,showvolume=rate=" + str(rate) + ":w=720:h=40:t=0:f=0.9:v=1:m=p:dm=1:ds=lin," + \
