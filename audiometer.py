@@ -31,7 +31,7 @@ quad = args.q
 filename = ffmpegEscape(filename_raw)
 
 if quad == True:
-    audioOutCommand = "[n][p];[n]pan=quad|BL=c0|BR=c1[ao]"
+    audioOutCommand = "[n][p];[n]aformat=cl=quad,pan=quad|BL=c0|BR=c1[ao]"
     audioChannels = "--audio-channels=quad"
 else:
     audioOutCommand = "[ao][p]"
